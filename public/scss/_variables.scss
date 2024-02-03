@@ -1,0 +1,21 @@
+/*------------------
+Responsive Media Query Variables
+------------------*/
+$small_mobile: '(max-width: 767px)';
+$large_mobile: 'only screen and (min-width: 480px) and (max-width: 767px)';
+$tab_device: 'only screen and (min-width: 768px) and (max-width: 991px)';
+$lg_device: '(max-width: 1120px)';
+$desktop: '(min-width: 1281px)';
+
+/*------------------
+Colors
+------------------*/
+$primary-color: var(--primary-color, #E51B2B);
+$secondary-color: var(--secondary-color, #C1CDDD);
+$text-dark: var(--text-dark, #111111);
+$text-gray: var(--text-gray, #6B6D76);
+$black-color: var(--black-color, #000000);
+$light-black: var(--light-black, #333333);
+$light-gray: var(--light-gray, #f5f5f5);
+$gray-color: var(--gray-color, #f1f1f1);
+$dark-gray: var(--dark-gray, #ebebeb);

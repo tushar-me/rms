@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../images/1200.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+i {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    color: #111111;
+}
+
+h2 {
+    color: #111111;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 28px;
+    text-align: center;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #111111;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.chat {
+    position: fixed;
+    top: 80%;
+    right: 0;
+    a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        i {
+            font-size: 30px;
+            color: #fff;
+        }
+    }
+    .whatsapp {
+        background-color: #0CBD09;
+    }
+    .facebook {
+        background-color: #0B66FF;
+    }
+}
+
+
+.slider-btn {
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        padding: 5px;
+        i {
+            color: #fff;
+            font-size: 26px;
+        }
+    }
+    .hero-slider-prev-button {
+        left: 20px;
+    }
+    .hero-slider-next-button{
+        right: 20px;
+    }
+}
+
+.slider-btn-client {
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        padding: 5px;
+        i {
+            color: $primary-color;
+            font-size: 26px;
+        }
+    }
+    .client-slider-prev-button  {
+        left: 20px;
+    }
+    .client-slider-next-button {
+        right: 20px;
+    }
+}
+
+
+.primary-button {
+    background: $primary-color;
+    padding: 8px 20px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.main {
+    background: url('/public/images/1200.png');
+}

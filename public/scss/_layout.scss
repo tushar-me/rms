@@ -1,0 +1,108 @@
+.logo {
+    width: 164px;
+    height: auto;
+    @media #{$small_mobile} {
+        width: 80px;
+        height: auto;
+    }
+}
+.mobile-menu {
+    max-width: 95%;
+    background-color: $primary-color;
+    button {
+        --bs-btn-close-bg: unset;
+        --bs-btn-close-opacity: unset;
+        i {
+            color: #fff;
+            font-size: 26px;
+        }
+    }
+    a,i,h4 {
+        color: #fff;
+    }
+    h4 {
+        font-size: 18px;
+    }
+}
+.top-bar {
+    &-text {
+        font-size: 22px;
+        letter-spacing: -0.5px;
+        font-weight: 600;
+        color: $primary-color;
+        text-transform: uppercase;
+        text-align: center;
+        @media #{$small_mobile} {
+            display: none;
+        }
+    }
+    
+    .menu-btn {
+        i {
+            font-size: 30px;
+            color: $primary-color;
+        }
+    }
+}
+.navbar {
+    background: $primary-color;
+    .nav-link {
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 15px 10px;
+        font-size: 18px;
+    }
+}
+
+footer {
+    padding-top: 50px;
+    h3 {
+        font-size: 22px;
+    }
+    .info {
+        p {
+            color: $text-dark;
+            font-size: 16px;
+            a {
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        a {
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+    }
+}
+
+
+.widget {
+        
+    i {
+        font-size: 20px;
+        transition: all ease-in-out 0.4s;
+    }
+    h4 {
+        color: $text-dark;
+        font-size: 20px;
+        font-weight: 500;
+        transition: all ease-in-out 0.4s;
+    }
+    &:hover {
+        i {
+            color: $primary-color;
+        }
+        h4 {
+            color: $primary-color;
+        }
+    }
+}
