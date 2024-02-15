@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Models\Product;
 use App\Models\Service;
+use App\Models\Brand;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -14,9 +15,10 @@ class DashboardController extends Controller
     public function index()
     {
         $products = Product::all()->count();
-        $services = Product::all()->count();
-        $clients = Product::all()->count();
-        return view('dashboard.index', compact('products', 'clients', 'services'));
+        $services = Service::all()->count();
+        $clients = Client::all()->count();
+        $brands = Brand::all()->count();
+        return view('dashboard.index', compact('products', 'clients', 'services', 'brands'));
     }
 
 //  Product Methods
@@ -199,7 +201,7 @@ class DashboardController extends Controller
         $image = time(). ".".$request->file('image')->extension();
         $request->file('image')->move(public_path('uploads'), $image);
         $brand= new Brand;
-        $brand->title = $request->title;
+        $brand->name = $request->name;
         $brand->image = $image;
         $brand->save();
 
@@ -219,7 +221,7 @@ class DashboardController extends Controller
             $request->file('image')->move(public_path('uploads'), $image);
             $brand->image = $image;
         }
-        $brand->title = $request->title;
+        $brand->name = $request->name;
         $brand->save();
 
         return to_route('dashboard.brands');
@@ -228,7 +230,7 @@ class DashboardController extends Controller
     public function deleteBrand($id)
     {
         $brand = Brand::where('id', $id)->first();
-        $imagePath = public_path('uploads/' . $brnad->image);
+        $imagePath = public_path('uploads/' . $brand->image);
         if (File::exists($imagePath)) {
             File::delete($imagePath);
         }

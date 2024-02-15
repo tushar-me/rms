@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Local Project @yield('title')</title>
+    <title>RSM - Engineering @yield('title')</title>
+    <link rel="shortcut icon" href="{{ asset('images/logo.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slick.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css')}}">
@@ -14,10 +15,10 @@
     <main>
         @yield('content')
         <div class="chat">
-            <a href="https://wa.me/01648550599" target="_blank" class="whatsapp">
+            <a href="https://wa.me/{{ $setting->phone }}" target="_blank" class="whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="https://wa.me/01648550599" target="_blank" class="facebook">
+            <a href="{{$setting->facebook_link}}" target="_blank" class="facebook">
                 <i class="fa-brands fa-facebook"></i>
             </a>
         </div>

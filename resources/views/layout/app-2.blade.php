@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard - Company Name</title>
+    <title>Dashboard - RSM</title>
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css')}}">
 </head>
-<body>
-    <section>
+<body style="min-height: 100vh;background:#fff;">
+    <section class="bg-white">
         <div class="side-bar bg-dark">
             <ul class="d-flex flex-column gap-3 ps-4 pt-5">
                 <li>
@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="text-white p-2 d-flex align-items-center fw-medium gap-2">
+                    <a href="/setting" class="text-white p-2 d-flex align-items-center fw-medium gap-2">
                     <i class="fa-solid fa-gear"></i> Settings
                     </a>
                 </li>

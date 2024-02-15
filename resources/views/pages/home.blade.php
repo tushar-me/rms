@@ -5,10 +5,10 @@
     <section class="position-relative">
         <div class="hero-items">
             <div class="hero-item">
-                <img src="{{ asset('images/1102.png')}}" alt="">
+                <img src="{{ asset('images/new-bg.jpeg')}}" alt="">
             </div>
             <div class="hero-item">
-                <img src="{{ asset('images/1101.png')}}" alt="">
+                <img src="{{ asset('images/WEB02.webp')}}" alt="">
             </div>
             <div class="hero-item">
                 <img src="{{ asset('images/1103.png')}}" alt="">
@@ -24,7 +24,7 @@
         </div>
     </section>
     @if(count($products) !== 0)
-        <section>
+        <section class="product-section">
         <div class="container py-5">
             <h2 class="mb-5 text-white fs-1 fw-semibold">our products</h2>
             <div class="row flex-wrap justify-content-center">
@@ -54,7 +54,7 @@
     </section>
     @endif
     @if(count($services) !== 0)
-        <section>
+        <section class="services-section">
             <div class="container py-5">
                 <h2 class="mb-5 text-white fs-1 fw-semibold">our services</h2>
                 <div class="row flex-wrap justify-content-center">
@@ -66,6 +66,7 @@
                                 </div>
                                 <div class="card-body">
                                     <h4>{{ $service->title }}</h4>
+                                    <p>{{$service->description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -75,66 +76,21 @@
         </section>
     @endif
 
-
-    <section class="b">
-        <div class="container py-5">
+    <div class="client-brand">
+        @if (count($clients) !== 0)
+    <section class="b client-section py-5">
+        <div class="container">
             <h2 class="mb-5 text-white fs-1 fw-semibold">our clients</h2>
             <div class="position-relative">
                 <div class="client-items">
+                    @foreach ( $clients as $client)
                     <div class="mx-2" >
                         <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
+                            <img class="card-img-top" src="{{ asset('/uploads/'.$client->image)}}" alt="Client" />
+                            <p class="pt-2">{{ $client->title }}</p>
                         </a>
                     </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Company name</p>
-                        </a>
-                    </div>
+                    @endforeach
 
                 </div>
                 {{-- <div class="slider-btn-client">
@@ -148,54 +104,21 @@
             </div>
         </div>
     </section>
-
-    <section class="mb-5" style="margin-top: -55px;">
+    @endif
+    @if (count($brands) !== 0)
+    <section class="py-5 brand-section">
         <div class="container py-5" style="max-width: 999px;">
             <h2 class="mb-5 text-white fs-1 fw-semibold">Brands</h2>
             <div class="position-relative">
                 <div class="brand-items">
+                    @foreach ( $brands as $brand)
                     <div class="mx-2" >
                         <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
+                            <img class="card-img-top" src="{{ asset('/uploads/'. $brand->image)}}" alt="Client" />
+                            <p class="pt-2">{{ $brand->name }}</p>
                         </a>
                     </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
-                        </a>
-                    </div>
-                    <div class="mx-2" >
-                        <a href="#" class="client shadow bg-white text-center">
-                            <img class="card-img-top" src="{{ asset('/images/client-3.jpg')}}" alt="Client" />
-                            <p>Brand name</p>
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
                 {{-- <div class="slider-btn-client">
                     <button class="client-slider-prev-button">
@@ -208,5 +131,7 @@
             </div>
         </div>
     </section>
+    @endif
+    </div>
 </div>
 @endsection

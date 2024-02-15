@@ -1,9 +1,9 @@
 @extends('layout.app')
 
 @section('content')
-    <section>
+    <section class="product-section-all">
         <div class="container py-5">
-            <h2 class="mb-5">our all products</h2>
+            <h2 class="mb-5 text-white">our all products</h2>
             <div class="row flex-wrap">
                 @if($products)
                     @foreach($products as $product)

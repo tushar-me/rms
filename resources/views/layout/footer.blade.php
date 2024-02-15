@@ -2,9 +2,9 @@
     <div class="container">
         <div class="row border-bottom pb-5">
             <div class="col-lg-5 col-md-6 col-12 pe-md-5 mb-3">
-                <img src="{{ asset('/images/1000.jpeg')}}" class="logo mb-3" alt="logo">
+                <img src="{{ asset('uploads/' . $setting->logo)}}" class="logo mb-3" alt="logo">
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem asperiores omnis temporibus eaque enim ipsam a expedita nam perspiciatis!</p>
+                <p>{{ $setting->about}}</p>
             </div>
             <div class="col-lg-4 col-md-6 col-12 ps-md-5 mb-3">
                 <h3 class="mb-3">Pages</h3>
@@ -28,13 +28,15 @@
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <h3 class="mb-3">Branch Office</h3>
-                <p>Dhaka Bangladesh</p>
-                <a href="#">(219) 555-0114</a>
+                <a href="{{$setting->location_link}}">{{ $setting->location}}</a>
+                <p class="mb-2">{{ $setting->city}} {{ $setting->country}}</p>
+                <a class="d-block" href="tel:{{ $setting->phone}}">{{ $setting->phone}}</a>
+                <a  class="d-block"  href="tel:{{ $setting->phone_secondary}}">{{ $setting->phone_secondary}}</a>
             </div>
         </div>
     </div>
     <div class="container py-4 text-center text-lg-start d-lg-flex align-items-center justify-content-between info">
-        <p>Copyright © 2024 example.com. All rights reserved.</p>
-        <p>Developed By <a href="#">mabia</a></p>
+        <p>Copyright © 2024 rmsengbd.com All rights reserved.</p>
+        <p>Developed By <a href="https://www.tusharimran.site" target="_blank">Tushar Imran</a></p>
     </div>
 </footer>

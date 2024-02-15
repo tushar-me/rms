@@ -1,26 +1,42 @@
 @extends('layout.app')
 
 @section('content')
-    <section>
+    <section class="about-section">
         <div class="container py-5">
-            <h1 class="text-center mb-2">About Us</h1>
-            <p style="max-width: 700px" class="text-center mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, voluptatum doloremque. Non excepturi odit saepe, cum quae vel ab laudantium laborum nisi, laboriosam, aperiam natus illum iure dolorem eveniet dicta.</p>
+            <h1 class="text-center mb-2 text-white">About Us</h1>
+            <p style="max-width: 700px" class="text-center mx-auto text-white">{{ $setting->about }}</p>
         </div>
-    </section>
-    {{-- <section>
-        <div class="container py-5 our-team">
-            <h2 class="mb-4">our team</h2>
+        <div class="container py-5">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="card shadow-none">
-                        <img src="{{ asset('/images/user.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">CEO</h5>
-                            <p class="card-text mb-3">Jhon Doe</p>
-                        </div>
-                    </div>
+                <div class="col-lg-3 col-md-6 col-12" >
+                    <a href="#" class="client shadow bg-white text-center h-100 mb-3 lg-mb-0">
+                        <img style="width:100px; height:100px;" class="card-img-top" src="{{ asset('images/vector-4.png')}}" alt="Client" />
+                        <p class="py-3 fw-semibold">PROACTIVENESS</p> 
+                        <p style="font-size: 14px">Constantly preparing and proactively seeking the best solutions to any challenge.</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" >
+                    <a href="#" class="client shadow bg-white text-center h-100 mb-3 lg-mb-0">
+                        <img style="width:100px; height:100px;" class="card-img-top" src="{{ asset('images/vector-2.png')}}" alt="Client" />
+                        <p class="py-3 fw-semibold">COMMITMENT</p> 
+                        <p style="font-size: 14px">We are committed to fulfilling our promises and accompanying clients and partners to success.</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" >
+                    <a href="#" class="client shadow bg-white text-center h-100 mb-3 lg-mb-0">
+                        <img style="width:100px; height:100px;" class="card-img-top" src="{{ asset('images/vector-3.png')}}" alt="Client" />
+                        <p class="py-3 fw-semibold">COOPERATION</p> 
+                        <p style="font-size: 14px">Being open-minded and clear in communication, always listening and comprehending.</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12" >
+                    <a href="#" class="client shadow bg-white text-center h-100 mb-3 lg-mb-0">
+                        <img style="width:100px; height:100px;" class="card-img-top" src="{{ asset('images/vector-1.png')}}" alt="Client" />
+                        <p class="py-3 fw-semibold">INTEGRITY</p> 
+                        <p style="font-size: 14px">Maintaining honesty in communication and at work. Forbidding to conceal the truth or to do bribery and embezzlement.</p>
+                    </a>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 @endsection

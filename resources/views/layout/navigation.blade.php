@@ -1,19 +1,26 @@
 <div class="bg-white">
-    <div class="container d-flex align-items-center justify-content-between top-bar py-3 ">
+    <div class="container d-flex align-items-center justify-content-between top-bar py-1">
+
+        @if ($setting->logo)
         <a href="{{ route('home') }}">
-            <img class="logo" src="{{ asset('images/1000.jpeg') }}" alt="logo">
+            <img class="logo" src="{{ asset('uploads/' . $setting->logo) }}" alt="logo">
         </a>
-        <p class="top-bar-text">Safety measures for fire, security protocols, and energy systems.</p>
+        @endif
+        @if ($setting->header_text)
+        <p class="top-bar-text" style="max-width: 700px;">{{ $setting->header_text }}</p>
+        @endif
+        @if ($setting->phone)
         <div class="d-flex align-items-center gap-4 d-none d-lg-flex">
-            <a href="#" class="d-flex align-items-center gap-2 widget">
+            <a href="tel:{{$setting->phone}}" class="d-flex align-items-center gap-2 widget">
                 <div>
                     <i class="fa-solid fa-phone-volume"></i>
                 </div>
                 <div>
-                    <h4>(219) 555-0114</h4>
+                    <h4>{{ $setting->phone }}</h4>
                 </div>
             </a>
         </div>
+        @endif
         <button class="menu-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
     </div>
 </div>
@@ -46,24 +53,6 @@
                 <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
             </li>
         </ul>
-        <div class="d-flex flex-column gap-4">
-            <a href="#" class="d-flex align-items-center gap-2 widget">
-                <div>
-                    <i class="fa-solid fa-phone-volume"></i>
-                </div>
-                <div>
-                    <h4>(219) 555-0114</h4>
-                </div>
-            </a>
-            <a href="#" class="d-flex align-items-center gap-2 widget">
-                <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div>
-                    <h4>Dhaka Bangladesh</h4>
-                </div>
-            </a>
-        </div>
     </div>
 </div>
 <nav class="navbar d-none d-lg-flex navbar-expand-lg flex-column p-0">

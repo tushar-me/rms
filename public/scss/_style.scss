@@ -2,6 +2,9 @@
     .hero-item {
         width: 100%;
         height: 75vh;
+        @media #{$small_mobile} {
+            height: 40vh;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -69,11 +72,12 @@
     display: inline-block;
     border-radius: 30px;
     padding: 20px ;
+    text-align: center;
     // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     img {
-        width: 100%;
+        width: 100px;
         height: 100px;
-        object-fit: cover;
+        margin-inline: auto;
     }
 }
 
@@ -165,4 +169,61 @@
             height: 100%;
         }
     }
+}
+
+
+.product-section {
+    background-image: url('../images/bg-1.jpeg');
+    background-position-y: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-section-all {
+    background-image: url('../images/bg-1.jpeg');
+    background-position-y: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.services-section {
+    background-image: url('../images/bg-2.jpeg');
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.services-section-all {
+    background-image: url('../images/bg-2.jpeg');
+    background-position-y: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.client-brand {
+    background-image: url('../images/bg-3.jpeg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.client-section-all {
+    background-image: url('../images/bg-3.jpeg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.about-section {
+    background-image: url('../images/bg-4.jpeg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contact-section {
+    background-image: url('../images/bg-4.jpeg');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

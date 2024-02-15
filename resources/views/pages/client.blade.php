@@ -1,40 +1,18 @@
 @extends('layout.app')
 
 @section('content')
-    <section>
+    <section class="client-section-all">
         <div class="container">
-            <h1 class="text-center py-5">Our Clients</h1>
+            <h1 class="text-center py-5 text-white">Our Clients</h1>
             <div class="row flex-wrap py-4">
+                @foreach ( $clients as $client)
                 <div class="col-lg-3 col-md-6 col-12 mb-3">
-                    <a href="#" class="w-100 h-100">
-                        <img src="{{ asset('images/client-1.jpg')}}" class="w-100 h-100 object-fit-cover" alt="">
+                    <a href="#" class="w-100 p-2 bg-white d-inline-block text-center p-3" style="border-radius:26px">
+                        <img src="{{ asset('uploads/'. $client->image)}}" class="w-100" style="height: 220px" alt="">
+                        <h3 class="py-1">{{ $client->title }}</h3>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                    <a href="#" class="w-100 h-100">
-                        <img src="{{ asset('images/client-1.jpg')}}" class="w-100 h-100 object-fit-cover" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                    <a href="#" class="w-100 h-100">
-                        <img src="{{ asset('images/client-1.jpg')}}" class="w-100 h-100 object-fit-cover" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                    <a href="#" class="w-100 h-100">
-                        <img src="{{ asset('images/client-1.jpg')}}" class="w-100 h-100 object-fit-cover" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                    <a href="#" class="w-100 h-100">
-                        <img src="{{ asset('images/client-1.jpg')}}" class="w-100 h-100 object-fit-cover" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-3">
-                    <a href="#" class="w-100 h-100">
-                        <img src="{{ asset('images/client-1.jpg')}}" class="w-100 h-100 object-fit-cover" alt="">
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

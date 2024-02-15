@@ -1,9 +1,9 @@
 @extends('layout.app')
 
 @section('content')
-    <section>
+    <section class="services-section-all">
         <div class="container py-5">
-            <h2 class="mb-4">our services</h2>
+            <h2 class="mb-4 text-white">our services</h2>
             <div class="row flex-wrap">
                 @foreach($services as $service)
                     <div class="col-lg-3 col-md-6 col-12">
